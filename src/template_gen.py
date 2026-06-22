@@ -19,7 +19,7 @@ import re
 
 def load_jinja_env(conf):
     loader = FileSystemLoader(conf.get("jinja_template_path"))
-    env = Environment(loader=loader, keep_training_newline=True)
+    env = Environment(loader=loader, keep_trailing_newline=True)
     return env
 
 
