@@ -23,7 +23,7 @@ bool {{NAME}}_caller_stream::call(CompoMe::Function_stream_recv& is, CompoMe::Re
   os.start();
 
   std::string name_function;
-  std::getline(is.get_si(), name_function, '(');
+  std::getline(is.get_si() >> std::ws, name_function, '(');
   bool b = this->call(name_function,is,os);
 
   is.end();
